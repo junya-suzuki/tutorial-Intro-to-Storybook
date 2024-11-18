@@ -1,0 +1,12 @@
+services:
+  storybook:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    ports:
+      - "6006:6006"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    command: yarn storybook --no-open
