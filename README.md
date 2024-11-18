@@ -19,3 +19,10 @@ $ docker compose up
 ```
 
 ブラウザで http://localhost:6006/ を開いてください。
+
+## コンテナ内でコマンドを実行する方法
+
+```bash
+$ docker compose exec storybook /bin/sh
+# yarn add --dev {追加したいアドオンなど}
+```
