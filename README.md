@@ -23,6 +23,20 @@ $ docker compose up
 ## コンテナ内でコマンドを実行する方法
 
 ```bash
-$ docker compose exec storybook /bin/sh
+$ docker compose exec storybook bash
 # yarn add --dev {追加したいアドオンなど}
 ```
+
+## Chapter4 Screens 注意事項
+
+```
+$ yarn test-storybook --watch
+```
+
+とあるが、これだとテストが実行されません。
+
+```
+$ yarn test-storybook --watchAll
+```
+
+こちらのコマンドでテストが実行できます。
