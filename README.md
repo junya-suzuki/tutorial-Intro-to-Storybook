@@ -40,3 +40,14 @@ $ yarn test-storybook --watchAll
 ```
 
 こちらのコマンドでテストが実行できます。
+
+## Chapter5 Deploy 注意事項
+
+Github の secrets に `CHROMATIC_PROJECT_TOKEN` を追加する必要がある。
+
+Github のリポジトリを開き、  
+`Settings` -> `Secrets and variables` -> `Actions` -> `Repository secrets`  
+へ `CHROMATIC_PROJECT_TOKEN` として Chromatic の project_token を追加する。
+
+Chromatic の project_token は  
+`Manage` -> `Configure` -> `PROJECT` で確認可能。
